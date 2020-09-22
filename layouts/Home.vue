@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <navbar :isTransparent="true" />
     <Nuxt />
   </div>
 </template>
