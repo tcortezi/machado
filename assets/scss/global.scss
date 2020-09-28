@@ -4,11 +4,107 @@ $family-primary: 'Inter', sans-serif;
 }
 
 $body-background-color: #1A202A;
+$body-color: #A3A6AA;
+$strong-color: #BABCBF;
+$link: #FF3535;
+$link-hover: #ff5d5d;
+$footer-background-color: #151A22;
 
 @import '~bulma';
+@import "~buefy/src/scss/buefy";
 
 h1 {
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 56px;
+	color: #FAFAFA;
+	@media (max-width: 769px) {
+		font-size: 30px;
+		line-height: 46px;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 30px;
+	color: #FAFAFA;
+}
+
+h4 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #FAFAFA;
+}
+
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-enter {
+  opacity: 0;
+}
+.slide-next-enter-active,
+.slide-next-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+.slide-next-enter {
+  transform: translateX(100%);
+}
+.slide-next-leave-to {
+  transform: translateX(-100%);
+}
+.slide-prev-enter-active,
+.slide-prev-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+.slide-prev-enter {
+  transform: translateX(-100%);
+}
+.slide-prev-leave-to {
+  transform: translateX(100%);
+}
+
+.carousel-arrow {
+	.icon {
+		@media only screen and (max-width: 1300px) {
+			display: none;
+		}
+		background: transparent;
+		color: #fafafa;
+		transition: transform 0.3s ease-in-out;
+		transform-origin: top left;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  position: absolute;
+		&:hover {
+			border: 1px solid #fafafa;
+			@media (min-width: 769px) {
+				transform: scale(1.1) translateY(-50%);
+			}
+		}
+		&::after {
+			content: '';
+			width: 100px;
+			height: 1px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 24px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&.has-icons-left {
+			left: 6rem;
+			&::after {
+				left: unset;
+				right: 24px;
+			}
+		}
+		&.has-icons-right {
+			right: 6rem;
+		}
+	}
 }

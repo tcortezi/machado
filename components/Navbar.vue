@@ -35,6 +35,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 16px 32px;
+		@media (max-width: 769px) {
+			padding: 16px 20px;
+		}
 		.items a {
 			font-weight: 300;
 			font-size: 16px;
@@ -46,6 +49,9 @@
 			transform-origin: center;
 			@media (min-width: 769px) {
 				&:hover, &.nuxt-link-active { color: #ffffff; }
+			}
+			@media (max-width: 769px) {
+				display: none;
 			}
 		}
 		.items a:not(:last-child) {

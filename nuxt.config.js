@@ -37,6 +37,9 @@ export default {
       Inter: [300, 600, 800]
     }
   },
+  modules: [
+    'nuxt-buefy'
+  ],
   server: {
     host: '0.0.0.0'
   },
