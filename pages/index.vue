@@ -6,7 +6,7 @@
       :arrow-hover="false"
       :indicator="false"
       :interval="5000"
-      :autoplay="false"
+      :autoplay="true"
       :has-drag="true"
       :animated="animation"
       class="slider"
