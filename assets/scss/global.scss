@@ -10,6 +10,8 @@ $link: #FF3535;
 $link-hover: #ff5d5d;
 $footer-background-color: #151A22;
 
+$section-padding: 4rem 1.5rem;
+
 @import '~bulma';
 @import "~buefy/src/scss/buefy";
 
@@ -28,6 +30,13 @@ h2 {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 30px;
+	color: #FAFAFA;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
 	color: #FAFAFA;
 }
 

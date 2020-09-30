@@ -3,7 +3,9 @@
 		<div class="container">
 			<div class="columns">
 				<div class="column">
-					<img src="~/assets/imgs/logo-footer.png">
+					<nuxt-link to="/">
+						<img src="~/assets/imgs/logo-footer.png">
+					</nuxt-link>
 				</div>
 				<div class="column is-offset-5">
 					<div class="links">
