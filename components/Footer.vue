@@ -10,21 +10,21 @@
 				<div class="column is-offset-5">
 					<div class="links">
 						<h4>Machado</h4>
-						<nuxt-link to="#">Linhas</nuxt-link>
-						<nuxt-link to="#">História</nuxt-link>
+						<nuxt-link to="/linhas">Linhas</nuxt-link>
+						<nuxt-link to="/historia">História</nuxt-link>
 					</div>
 				</div>
 				<div class="column">
 					<div class="links">
 						<h4>Fenix</h4>
-						<nuxt-link to="#">Conheça</nuxt-link>
+						<nuxt-link to="/fenix">Conheça</nuxt-link>
 					</div>
 				</div>
 				<div class="column">
 					<div class="links">
 						<h4>Contatos</h4>
-						<nuxt-link to="#">Fale Conosco</nuxt-link>
-						<nuxt-link to="#">Carreiras</nuxt-link>
+						<nuxt-link to="/contato">Fale Conosco</nuxt-link>
+						<nuxt-link to="/contato">Carreiras</nuxt-link>
 					</div>
 				</div>
 				<div class="column">

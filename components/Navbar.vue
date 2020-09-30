@@ -7,9 +7,9 @@
 			<div class="mobileMenu" @click="toggleMenu" :class="isMenuActive ? 'active' : ''"></div>
 			<div class="items" @click="closeMenu">
 				<nuxt-link to="/linhas">Linhas</nuxt-link>
-				<nuxt-link to="#">Fenix</nuxt-link>
+				<nuxt-link to="/fenix">Fenix</nuxt-link>
 				<nuxt-link to="/historia">História</nuxt-link>
-				<nuxt-link to="#">Contato</nuxt-link>
+				<nuxt-link to="/contato">Contato</nuxt-link>
 			</div>
 		</div>
 	</nav>
@@ -76,6 +76,9 @@
 		transition: all 0.4s cubic-bezier(0.5, 1, 0.89, 1);
 		&.transparent {
 			background-color: transparent;
+		}
+		@media (max-width: 769px) {
+			width: 100vw;
 		}
 	}
 	.container-fluid {

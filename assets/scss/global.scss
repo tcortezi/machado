@@ -8,12 +8,20 @@ $body-color: #A3A6AA;
 $strong-color: #BABCBF;
 $link: #FF3535;
 $link-hover: #ff5d5d;
+$danger: #FF3535;
 $footer-background-color: #151A22;
+
+// $input-focus-border-color: #0648CC;
+// $input-focus-box-shadow-color: transparent;
 
 $section-padding: 4rem 1.5rem;
 
 @import '~bulma';
 @import "~buefy/src/scss/buefy";
+
+.label {
+	color: #fafafa;
+}
 
 .fixed {
 	overflow: hidden;

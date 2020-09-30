@@ -34,7 +34,7 @@
             <p class="mb-4 pb-4">
               Atualmente operamos linhas municipais e intermunicipais ligando os bairros dos município de <strong>Duque de Caxias</strong> aos bairros de <strong>Magé</strong>, além do expresso Fênix que é a opção ideal para turismo, eventos e viagens. Possuímos uma frota com mais de <strong>100 carros</strong> com média de 4 anos, 150 funcionários e <strong>mais de 1 milhão de usuários por mês</strong> viajando em nossas 12 linhas.
             </p>
-            <nuxt-link to="#">Conheça nossa história -></nuxt-link>
+            <nuxt-link to="/historia">Conheça nossa história -></nuxt-link>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
 				animation: 'fade',
 				slides: [
           { className: 'first', title: 'Conforto, segurança <br /><span>e design</span>', btnText: 'Conheça nossas linhas', btnLink: '/linhas', image: 'slide1.png', pattern: 'pattern1.jpg', hr: 'background: linear-gradient(90deg, #021D52 0%, #0648CC 36.46%, #FF0303 100%);' },
-          { className: 'second', title: '<span>A melhor opção para</span> Turismo, Eventos e Viagens', btnText: 'Conheça o expresso fenix', btnLink: '#', image: 'slide2.png', pattern: 'pattern2.jpg', hr: 'background: linear-gradient(90deg, #FABB2E 0%, #D73E0D 100%);' }
+          { className: 'second', title: '<span>A melhor opção para</span> Turismo, Eventos e Viagens', btnText: 'Conheça o expresso fenix', btnLink: '/fenix', image: 'slide2.png', pattern: 'pattern2.jpg', hr: 'background: linear-gradient(90deg, #FABB2E 0%, #D73E0D 100%);' }
 				]
 			}
 		},
