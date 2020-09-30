@@ -7,7 +7,7 @@
 			<div class="items">
 				<nuxt-link to="/linhas">Linhas</nuxt-link>
 				<nuxt-link to="#">Fenix</nuxt-link>
-				<nuxt-link to="#">História</nuxt-link>
+				<nuxt-link to="/historia">História</nuxt-link>
 				<nuxt-link to="#">Contato</nuxt-link>
 			</div>
 		</div>

@@ -49,6 +49,17 @@ h4 {
 	color: #FAFAFA;
 }
 
+.subtitle {
+	font-size: 14px;
+	line-height: 14px;
+	color: #fafafa;
+	text-transform: uppercase;
+	opacity: .75;
+	margin-bottom: .75rem;
+}
+
+.subtitle + h2 { margin-top: -.25rem; }
+
 .fade-enter-active {
   transition: opacity 1s;
 }

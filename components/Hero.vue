@@ -14,6 +14,9 @@
 	.hero {
 		position: relative;
 		height: 328px;
+		@media (max-width: 769px) {
+			height: 20vh;
+		}
 		hr {
 			background: linear-gradient(90deg, #021D52 0%, #0648CC 36.46%, #FF0303 100%);
 			position: absolute;
