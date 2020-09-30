@@ -15,6 +15,11 @@ $section-padding: 4rem 1.5rem;
 @import '~bulma';
 @import "~buefy/src/scss/buefy";
 
+.fixed {
+	overflow: hidden;
+	position: fixed;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 40px;

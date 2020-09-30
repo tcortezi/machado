@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <navbar :isTransparent="true" />
+  <div :class="fixed ? 'fixed' : ''">
+    <navbar :isTransparent="true" v-on:menuToggled="fixed = !fixed" />
     <Nuxt />
     <footer-component />
   </div>
@@ -12,6 +12,11 @@
   export default {
   	components: {
   		FooterComponent
-  	}
+  	},
+    data() {
+      return {
+        fixed: false
+      }
+    }
   }
 </script>
