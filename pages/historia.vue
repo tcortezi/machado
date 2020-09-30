@@ -68,6 +68,9 @@
 		flex-wrap: wrap;
 		width: 100%;
 		margin: 64px 0;
+		@media (max-width: 769px) {
+			justify-content: center;
+		}
 		img {
 			max-width: 300px;
 			box-shadow: 0px 9px 31px rgba(0, 0, 0, 0.37), 0px 1.12694px 3.88168px rgba(0, 0, 0, 0.185);
