@@ -9,7 +9,7 @@
 				<i class="mdi mdi-chevron-right mdi-24px"></i>
 			</div>
 		</div>
-		<transition name="down">
+		<transition name="down" mode="out-in">
 			<div class="info-card" v-if="active">
 				<div class="map">
 					<iframe
@@ -59,20 +59,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.down-enter-active {
-		transition: transform 0.4s cubic-bezier(0.85, 0, 0.15, 1), opacity 0.3s ease-in .1s, max-height 0.4s ease;
-		transform: translateY(0);
-		max-height: 600px;
-	}
-	.down-leave-active {
-		transition: transform .1s ease;
-	}
-	.down-enter, .down-leave-to {
-		opacity: 0;
-		max-height: 0;
-		padding: 0;
-		transform: translateY(-20px);
-	}
 	.line {
 		max-width: 604px;
 	}
@@ -140,6 +126,23 @@
 			flex-direction: column;
 			.map { margin: 0 auto; margin-bottom: 24px;}
 		}
+	}
+	.down-enter-active, .down-leave-active {
+	  transition: max-height .4s cubic-bezier(0.65, 0, 0.35, 1), padding .4s cubic-bezier(0.65, 0, 0.35, 1);
+	  max-height: 600px;
+	  div {
+	  	opacity: 1;
+	  	transition: opacity .2s ease .2s;
+	  }
+	}
+	.down-enter, .down-leave-to {
+	  max-height: 0px;
+	  padding: 0;
+	  transition: max-height .4s ease, padding .4s ease;
+	  div {
+	  	opacity: 0;
+	  	transition: opacity .2s ease;
+	  }
 	}
 	.main-card {
 		z-index: 30;
