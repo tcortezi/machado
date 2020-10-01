@@ -30,6 +30,17 @@
 				<div class="column">
 					<div class="links">
 						<h4>Redes Sociais</h4>
+						<div class="social">
+							<a href="#">
+								<img src="~/assets/imgs/fb.svg">
+							</a>
+							<a href="#">
+								<img src="~/assets/imgs/instagram.svg">
+							</a>
+							<a href="#">
+								<img src="~/assets/imgs/twitter.svg">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -38,6 +49,18 @@
 </template>
 
 <style lang="scss" scoped>
+	.social {
+		display: flex;
+		align-items: center;
+		a + a { margin-left: 24px; }
+		@media (min-width: 769px) {
+			a {
+				opacity: .75;
+				transition: opacity .3s ease;
+				&:hover { opacity: 1; }
+			}
+		}
+	}
 	.links {
 		display: flex;
 		flex-direction: column;
@@ -54,6 +77,6 @@
 				&:hover { color: #fafafa; }
 			}
 		}
-		a + a { margin-top: 12px; }
+		> a + a { margin-top: 12px; }
 	}
 </style>
