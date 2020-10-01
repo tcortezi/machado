@@ -38,8 +38,15 @@ export default {
     }
   },
   modules: [
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/axios'
   ],
+  axios: {
+    https: true,
+    baseUrl: 'transpmachado.com.br',
+    browserBaseURL: '/',
+    progress: false
+  },
   server: {
     host: '0.0.0.0'
   },
