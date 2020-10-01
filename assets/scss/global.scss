@@ -23,6 +23,9 @@ $section-padding: 4rem 1.5rem;
 	color: #fafafa;
 }
 
+.button:focus:not(:active) {
+	box-shadow: unset;
+}
 .fixed {
 	overflow: hidden;
 	position: fixed;
