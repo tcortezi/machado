@@ -32,9 +32,9 @@
 					        <b-field
 					            label="Assunto">
 					            <b-select placeholder="Selecione" v-model="subject" expanded>
-					                <option value="machado">Machado</option>
-					                <option value="fenix">Fenix</option>
-					                <option value="carreira">Carreira</option>
+					                <option value="Machado">Machado</option>
+					                <option value="Fenix">Fenix</option>
+					                <option value="Carreira">Carreira</option>
 					            </b-select>
 					        </b-field>
 					        <b-field label="Mensagem">

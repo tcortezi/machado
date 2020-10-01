@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   const { body } = req
 
   const msg = {
-    to: 'tiago@clarific.com.br',
+    to: 'turismo@turismofenix.com',
     from: 'no-reply@transpmachado.com.br',
     replyTo: `${body.email}`,
     subject: `Contato via website [${body.subject}]`,
