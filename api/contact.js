@@ -7,6 +7,7 @@ module.exports = (req, res) => {
   const msg = {
     to: 'tiago@clarific.com.br',
     from: 'no-reply@transpmachado.com.br',
+    replyTo: `${body.email}`,
     subject: `Contato via website [${body.subject}]`,
     text: 'Você recebeu um contato via website',
     html: `<strong>Nome:</strong> ${body.name} <br /><strong>Email:</strong> ${body.email} <br /><strong>Fone:</strong> ${body.phone} <br /><strong>Mensagem:</strong> ${body.text}`,
