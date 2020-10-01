@@ -8,41 +8,50 @@
 						<h2>Contato</h2>
 						<div class="columns mt-4">
 							<div class="column is-5">
-				        <b-field label="Nome">
-				            <b-input v-model="name"
-					            icon="account"
-				            	placeholder="Seu nome">
-				            </b-input>
-				        </b-field>
-				        <b-field label="Email">
-				            <b-input v-model="email"
-				            	type="email"
-				            	icon="email"
-				            	validation-message="Preencha seu email corretamente"
-				            	placeholder="seu@email.com">		
-				            </b-input>
-				        </b-field>
-				        <b-field label="Telefone">
-				            <b-input v-model="phone"
-					            icon="phone"
-				            	placeholder="(DDD) 9 9999-9999">		
-				            </b-input>
-				        </b-field>
-				        <b-field
-				            label="Assunto">
-				            <b-select placeholder="Selecione" expanded>
-				                <option value="machado">Machado</option>
-				                <option value="fenix">Fenix</option>
-				                <option value="carreira">Carreira</option>
-				            </b-select>
-				        </b-field>
-				        <b-field label="Mensagem">
-				            <b-input maxlength="200" type="textarea" placeholder="Escreva sua mensagem">
-				            </b-input>
-				        </b-field>
-				        <button class="button" disabled>
-				        	Enviar
-				        </button>
+								<form @submit.prevent="submitForm">
+					        <b-field label="Nome">
+					            <b-input v-model="name"
+						            icon="account"
+					            	placeholder="Seu nome">
+					            </b-input>
+					        </b-field>
+					        <b-field label="Email">
+					            <b-input v-model="email"
+					            	type="email"
+					            	icon="email"
+					            	validation-message="Preencha seu email corretamente"
+					            	placeholder="seu@email.com">		
+					            </b-input>
+					        </b-field>
+					        <b-field label="Telefone">
+					            <b-input v-model="phone"
+						            icon="phone"
+					            	placeholder="(DDD) 9 9999-9999">		
+					            </b-input>
+					        </b-field>
+					        <b-field
+					            label="Assunto">
+					            <b-select placeholder="Selecione" v-model="subject" expanded>
+					                <option value="machado">Machado</option>
+					                <option value="fenix">Fenix</option>
+					                <option value="carreira">Carreira</option>
+					            </b-select>
+					        </b-field>
+					        <b-field label="Mensagem">
+					            <b-input v-model="text" maxlength="200" type="textarea" placeholder="Escreva sua mensagem">
+					            </b-input>
+					        </b-field>
+					        <button
+					        	type="submit"
+					        	class="button"
+										:class="{
+											'is-loading': isLoading,
+											'is-success': submitted
+										}"
+										:disabled="submitted">
+					        	Enviar
+					        </button>
+								</form>
 							</div>
 							<div class="column is-5 is-offset-2 contacts">
 								<div>
@@ -67,12 +76,44 @@
 </template>
 
 <script>
+	const url = '/api/contact'
 	export default {
 		data() {
 			return {
 				name: '',
 				email: '',
-				phone: ''
+				phone: '',
+				subject: '',
+				text: '',
+				isLoading: false,
+				submitted: false
+			}
+		},
+		methods: {
+			submitForm() {
+				this.isLoading = true
+				this.$axios.$post(url, {
+					name: this.name,
+					email: this.email,
+					phone: this.phone,
+					subject: this.subject,
+					text: this.text
+				}).then((response) => {
+					this.isLoading = false
+					this.submitted = true
+					this.$buefy.toast.open({
+						message: 'Recebemos sua mensagem!',
+						type: 'is-success',
+						duration: 4000
+					})
+				}).catch((error) => {
+					this.isLoading = false
+					this.$buefy.toast.open({
+						message: 'Algo deu errado!',
+						type: 'is-danger',
+						duration: 4000
+					})
+				})
 			}
 		}
 	}
