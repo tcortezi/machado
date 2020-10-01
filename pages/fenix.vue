@@ -22,3 +22,13 @@
 		</section>
 	</div>
 </template>
+
+<script>
+	export default {
+		head() {
+			return {
+				title: 'Expresso Fenix'
+			}
+		},
+	}
+</script>

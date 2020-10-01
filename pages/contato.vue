@@ -78,6 +78,11 @@
 <script>
 	const url = '/api/contact'
 	export default {
+		head() {
+			return {
+				title: 'Contato - Machado'
+			}
+		},
 		data() {
 			return {
 				name: '',

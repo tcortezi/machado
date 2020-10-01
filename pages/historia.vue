@@ -53,7 +53,11 @@
 <script>
 	import Hero from '~/components/Hero.vue'
 	export default {
-
+		head() {
+			return {
+				title: 'História - Machado'
+			}
+		},
 	}
 </script>
 

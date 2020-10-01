@@ -24,6 +24,11 @@
 	import Hero from '~/components/Hero.vue'
 	import BusLine from '~/components/BusLine.vue'
 	export default {
+		head() {
+			return {
+				title: 'Linhas - Machado'
+			}
+		},
 		data() {
 			return {
 				lines: [

@@ -4,11 +4,39 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Machado',
+    title: 'Transporte Machado',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Conheça a Machado e o Expresso Fenix e faça suas viagens de ônibus com segurança e conforto.' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Transporte Machado' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@transpmachado' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://transpmachado.com.br/machado-card.jpg'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://transpmachado.com.br/machado-card.jpg'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Transporte Machado'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://transpmachado.com.br/machado-card.jpg'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
